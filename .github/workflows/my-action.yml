@@ -1,0 +1,12 @@
+name: My Test Workflow
+
+# triggers
+on: [push]
+
+# runs in parallel
+jobs:
+    say-hello:
+        runs-on: ubuntu-latest
+        steps:
+          - run: echo "Hello, GitHub Actions!"
+
