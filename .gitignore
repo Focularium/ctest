@@ -1,0 +1,9 @@
+# Executables
+main
+
+# Object files
+*.o
+*.a
+
+# IDE files
+.vscode/

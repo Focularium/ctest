@@ -10,3 +10,16 @@ jobs:
         steps:
           - run: echo "Hello, GitHub Actions!"
 
+    build-hello:
+        needs: [say-hello]
+        runs-on: ubuntu-latest
+        steps:
+          - name: Check out this repo
+            uses: actions/checkout@v3
+
+          - name: Install dependencies
+             run: sudo apt install -y build-essential
+
+          - run: pwd
+
+          - run: make run
